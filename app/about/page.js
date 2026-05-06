@@ -1,5 +1,7 @@
-export default aboutPage(){
+export default function aboutPage(){
   return(
-    <div></div>
+    <div className="bg-orange-500">
+    <p>Hello My Name is adfssdfdasfasdf Page</p>
+    </div>
   )
 }
