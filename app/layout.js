@@ -10,9 +10,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="min-h-screen flex flex-col ">
         <header>
-          <nav className="bg-gray-800 sm:block hidden">
-            <div className="flex justify-between text-white text-2xl  py-6 px-5">
-              <Link href={'/'} className={`mx-12 font-bold tracking-widest text-2xl ${roboto.className} `}>
+          <nav className="bg-gray-800 ">
+            <div className="flex justify-between flex-col sm:gap-0 gap-4 sm:flex-row items-center text-white text-2xl  py-6 px-5">
+              <Link href={'/'} className={`mx-12 text-center font-bold tracking-widest text-lg  tsm:text-2xl ${roboto.className} `}>
                 Foodies Community
               </Link>
               <div className={`flex gap-8 mx-12 ${roboto.className} text-lg`}>
