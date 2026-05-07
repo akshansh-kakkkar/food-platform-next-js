@@ -51,11 +51,15 @@ export default function PageTransition({ children }) {
   useEffect(() => {
     setLoading(true);
     const emojiInterval = setInterval(() => {
-      setEmojiIndex((prev)=> prev + 1 % loadingIcons.length)
+      setEmojiIndex((prev)=> (prev + 1) % loadingIcons.length)
     }, 150);
    const timer = setTimeout(() => {
       setLoading(false);
     }, 2000);
+    return()=>{
+      clearTimeout(timer);
+      clearInterval(emojiInterval)
+    }
   }, [pathname]);
 
   return (

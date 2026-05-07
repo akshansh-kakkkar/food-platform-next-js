@@ -2,17 +2,17 @@ import { Roboto } from "next/font/google";
 const roboto = Roboto({
   subsets: ["latin"],
 });
-export default function aboutPage() {
+export default function contactPage() {
   return (
     <div className="mx-12 my-8">
       <h1
         className={`text-4xl text-blue-950 font-medium ${roboto} font-medium`}
       >
-        ABOUT US
+        Contact US
       </h1>
       <div className="w-27 h-1 bg-orange-400"></div>
       <div
-        className={`mx-42 my-12 border-2 border-orange-400 text-blue-950 bg-blue-100 rounded-2xl p-12 text-xl tracking-widest leading-12.5 ${roboto}`}
+        className={`mx-42 my-12 border-2 border-orange-400 bg-blue-100 rounded-2xl p-12 text-xl text-blue-950 tracking-widest leading-12.5 ${roboto}`}
       >
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab deserunt
         dicta ad repellat, reiciendis nostrum totam, dolore dolor officia, aut
