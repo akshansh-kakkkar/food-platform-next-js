@@ -11,6 +11,7 @@ const lato = Lato({
 const roboto = Roboto({
   subsets: ["latin"],
 });
+
 export default function Home() {
   return <div className="flex lg:flex-row gap-5 lg:gap-0 flex-col mx-22 justify-around items-center h-screen text-gray-700">
     <div className="flex  flex-col lg:items-start items-center gap-8">

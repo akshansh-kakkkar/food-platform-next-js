@@ -7,9 +7,9 @@ export default function MealsLayout({ children }) {
         <h1 className={`text-2xl text-yellow-800`}>Meals Section</h1>
         <p className="text-xl font-medium text-yellow-600">Discover amazing meals from our community of food lovers</p>
         </div>
-        <nav className="flex gap-6">
-          <Link className="flex bg-orange-400 text-white text-md sm:text-2xl p-2" href={"/meals"}>All Meals</Link>
-          <Link className="flex bg-green-600 text-white text-md sm:text-2xl p-2" href={"/meals/share"}>Share your recipe</Link>
+        <nav className="flex gap-2">
+          <Link className="flex -translate-y-2 rounded-lg bg-orange-400 text-white text-md sm:text-2xl p-2" href={"/meals"}>All Meals</Link>
+          <Link className="flex -translate-y-2 rounded-lg bg-green-600 text-white text-md sm:text-2xl p-2" href={"/meals/share"}>Share your recipe</Link>
         </nav>
       
 </div>
