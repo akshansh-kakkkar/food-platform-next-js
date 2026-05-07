@@ -18,13 +18,17 @@ export default function Home() {
       <h1 className={`lg:text-7xl lg:text-start text-center text-6xl ${lato.className}`}>Recipe Ninja</h1>
       <p className={`lg:w-120 text-xl lg:text-left text-center lg:text-2xl text-gray-600  ${roboto.className}`}>Browse through our collections of delecious recipes shared by food
         lovers worldwide!</p>
+        <div className="flex gap-4">
         <motion.div whileTap={{scale:1.1}} whileHover={{scale:0.95}}>
         <Link className="lg:text-xl text-lg text-center lg:ext-2xl bg-blue-950 shadow-2xl shadow-blue-950  flex text-white w-fit py-3 px-5 lg:px-12" href={'/meals'}>View Recipes</Link>
         </motion.div>
+                <motion.div whileTap={{scale:1.1}} whileHover={{scale:0.95}}>
+        <Link className="lg:text-xl text-lg text-center lg:ext-2xl border-2 border-blue-950 shadow-2xl flex text-blue-950 w-fit py-3 px-5 lg:px-12" href={'/dashboard'}>View Dashboard</Link>
+        </motion.div>
+        </div>
     </div>
     <div>
-
-      <Image height={200} width={480} src="/hero.png" alt="hero"/>
+<Image height={200} width={480} src="/hero.png" alt="hero"/>
     </div>
   </div>;
 }

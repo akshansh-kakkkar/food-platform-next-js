@@ -1,5 +1,7 @@
-export default function recentActivity(){
+export default function analytics(){
     return(
-        <div>s</div>
+        <div className="text-2xl font-medium">
+            No Recent Activity
+        </div>
     )
 }

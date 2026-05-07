@@ -3,155 +3,15 @@ import { useState } from "react";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Roboto } from "next/font/google";
-import {motion} from "motion/react"
+import {motion} from "motion/react";
+import { meals } from "../data/meals";
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
 });
 
-export default function meals() {
-  const meals = [
-    {
-      slug: "spaghetti-carbonara",
-      name: "Spaghetti Carbonara",
-      chef: "Maria",
-    },
-    {
-      slug: "chicken-curry",
-      name: "Chicken Curry",
-      chef: "Raj",
-    },
-    {
-      slug: "high-protein-taco",
-      name: "Veg Tempeh Taco",
-      chef: "Carlos",
-    },
-    {
-      slug: "paneer-butter-masala",
-      name: "Paneer Butter Masala",
-      chef: "Riya",
-    },
-    {
-      slug: "classic-cheeseburger",
-      name: "Classic Cheese Burger",
-      chef: "Sofia",
-    },
-    {
-      slug: "margherita-pizza",
-      name: "Margherita Pizza",
-      chef: "John",
-    },
-    {
-      slug: "sushi",
-      name: "Sushi",
-      chef: "Kenji",
-    },
-    {
-      slug: "grilled-salmon",
-      name: "Grilled Salmon",
-      chef: "Aarav",
-    },
-    {
-      slug: "vegan-rice-bowl",
-      name: "Vegan Rice Bowl",
-      chef: "Olivia",
-    },
-    {
-      slug: "falafel-wrap",
-      name: "Falafel Wrap",
-      chef: "Layla",
-    },
-    {
-      slug: "mexican-burrito",
-      name: "Mexican Burrito",
-      chef: "Deigo",
-    },
-    {
-      slug: "thai-curry",
-      name: "Thai Curry",
-      chef: "Nina",
-    },
-    {
-      slug: "ramen-bowl",
-      name: "Ramen Bowl",
-      chef: "Haruto",
-    },
-    {
-      slug: "bbq-steak",
-      name: "BBQ Steak",
-      chef: "Liam",
-    },
-    {
-      name: "Avocado Toast",
-      slug: "avocado-toast",
-      chef: "Chloe",
-    },
-    {
-      slug: "pesto-pasta",
-      name: "Pesto Pasta",
-      chef: "Marco",
-    },
-    {
-      slug: "fried-rice-special",
-      name: "Fried Rice Special",
-      chef: "Wei",
-    },
-    {
-      slug: "ceaser-salad",
-      name: "Ceaser Salad",
-      chef: "Sophia",
-    },
-    {
-      slug: "tandoori-chicken",
-      name: "Tandoori Chicken",
-      chef: "Arjun",
-    },
-    {
-      slug: "shrimp-noodles",
-      name: "Shrimp Noodles",
-      chef: "Mia",
-    },
-    {
-      slug: "loaded-fries",
-      name: "Loaded Fries",
-      chef: "Ethan",
-    },
-    {
-      slug: "mushroom-risotto",
-      name: "Mushroom Risotto",
-      chef: "Isabella",
-    },
-    {
-      slug: "kim-bibimbap",
-      name: "Kim Bibimbap",
-      chef: "Jiho",
-    },
-    {
-      slug: "chocolate-pancakes",
-      name: "Chocolate Pancakes",
-      chef: "Noah",
-    },
-    {
-      slug: "spinach-lasgaa",
-      name: "Spinach Lasagna",
-      chef: "Elena",
-    },
-    {
-      slug: "fish-and-chips",
-      name: "Fish and Chips",
-      chef: "Oliver",
-    },
-    {
-      slug: "dumplings",
-      name: "Dumplings",
-      chef: "Mei",
-    },
-    {
-      slug: "fruit-juice",
-      name: "Fruit Juice",
-      chef: "Ava",
-    },
-  ];
+export default function mealsPerPage() {
+
   const [currentPage, setCurrentPage] = useState(1);
   const mealsPerPage = 5;
   const starIndex = (currentPage - 1) *  mealsPerPage;
