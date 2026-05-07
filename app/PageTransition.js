@@ -41,8 +41,7 @@ export default function PageTransition({ children }) {
     "🍿",
     "🍮",
     "🍫",
-    "🍝",
-
+    "🍝"
   ];
   
   const pathname = usePathname();
@@ -66,7 +65,7 @@ export default function PageTransition({ children }) {
     <>
       {loading ? (
         <div className="flex flex-col  items-center text-center justify-center h-screen">
-          <div className="text-7xl animate-bounce">
+          <div className="text-7xl text-center flex items-center justify-center animate-bounce">
             {loadingIcons[emojiIndex]}
           </div>
           <div className="text-xl text-blue-950 font-medium animate-pulse duration-200">
