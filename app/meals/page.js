@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Roboto } from "next/font/google";
 import {motion} from "motion/react";
+import Image from "next/image";
 import { meals } from "../data/meals";
 const roboto = Roboto({
   subsets: ["latin"],

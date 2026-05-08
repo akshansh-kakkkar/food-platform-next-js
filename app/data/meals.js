@@ -1,4 +1,4 @@
-import { m } from "motion/react";
+import { image } from "motion/react-client";
 
 export const meals = [
   {
@@ -6,6 +6,7 @@ export const meals = [
     slug: "spaghetti-carbonara",
     name: "Spaghetti Carbonara",
     chef: "Maria",
+    image : "/spaghetti.webp",
     description:
       "classic Italian pasta made with creamy sauce, parmesan cheese, and perfectly cooked spaghetti.",
     likes: 128,
@@ -32,6 +33,7 @@ export const meals = [
     cookTime: "35 mins",
     serving: 3,
     likes: 246,
+    image : "/chickencurry.webp",
     cuisine: "Indian",
     description:
       "Rich and flavorful chicken curry cooked with aromatic Indian spices and herbs.",
@@ -48,12 +50,13 @@ export const meals = [
     slug: "high-protein-taco",
     name: "Veg Tempeh Taco",
     chef: "Carlos",
+    image  : "/taco.webp",
     email: "carlos@foodies.com",
     serving: 4,
     cookTime: "15 mins",
     prepTime: "25 mins",
     cuisine: "Mexican",
-    likess: 325,
+    likes: 325,
     description:
       "Healthy high protein tacos filled with seaasoned tempeh, veggies, and fresh toppings.",
     instructions: [
@@ -84,6 +87,7 @@ export const meals = [
       "Add paneer cubes.",
       "Cook for 5 minutes and serve.",
     ],
+    image : "/paneerbuttermasala.webp"
   },
   {
     id: 5,
@@ -105,6 +109,7 @@ export const meals = [
       "Assemble burger with vegetables",
       "Serve with fries",
     ],
+    image : "burger.webp"
   },
   {
     id: 6,
@@ -126,6 +131,7 @@ export const meals = [
       "Bake until crispy.",
       "Garnish with basil leaves.",
     ],
+    image : "/pizza.webp"
   },
   {
     id: 7,
@@ -147,6 +153,7 @@ export const meals = [
       "Roll tightly and slice.",
       "Serve with soy sauce.",
     ],
+    image : "/sushi.webp"
   },
   {
     id: 8,
@@ -168,6 +175,7 @@ export const meals = [
       "Serve hot with veggies",
     ],
     likes: 360,
+    image : "/salmon.webp"
   },
   {
     id: 9,
@@ -179,169 +187,409 @@ export const meals = [
     prepTime: "15 mins",
     cookTime: "15 mins",
     likes: 190,
-    cuisine : "chinese",
-    description : "Nutrtious vegan rice bowl packed with vegetables and flavorful sauces.",
-    instructions : [
-        "Cook rice until fluffy.",
-        "Saute fresh vegetables.",
-        "Arrange veggies over rice.",
-        "Add sauce and serve warm."
-    ]
+    cuisine: "chinese",
+    description:
+      "Nutrtious vegan rice bowl packed with vegetables and flavorful sauces.",
+    instructions: [
+      "Cook rice until fluffy.",
+      "Saute fresh vegetables.",
+      "Arrange veggies over rice.",
+      "Add sauce and serve warm.",
+    ],
+    image : "/ricebowl.webp"
   },
   {
-    id : 10,
+    id: 10,
     slug: "falafel-wrap",
     name: "Falafel Wrap",
     chef: "Layla",
-    likes : 221,
-    email : "layla@foodies.com",
-    serving : 2,
-    prepTime : "15 mins", 
-    cookTime : "20 mins",
-    cuisine : "middle eastern", 
-    description : "Crispy falafel wrapped in soft flatbread with hummus and salad.",
-    instructions : [
-        "Prepare falafel mixture.",
-        "Fry falafel juntil crispy.",
-        "Spread hummus on wrap.",
-        "Add salad and falafel."
-    ]
+    likes: 221,
+    email: "layla@foodies.com",
+    serving: 2,
+    prepTime: "15 mins",
+    cookTime: "20 mins",
+    cuisine: "middle eastern",
+    description:
+      "Crispy falafel wrapped in soft flatbread with hummus and salad.",
+    instructions: [
+      "Prepare falafel mixture.",
+      "Fry falafel juntil crispy.",
+      "Spread hummus on wrap.",
+      "Add salad and falafel.",
+    ],
+    image : "/falafelwrap.webp"
   },
   {
-    id : 11,
+    id: 11,
     slug: "mexican-burrito",
     name: "Mexican Burrito",
     chef: "Deigo",
-    likes : 267,
-    serving : 2,
-    cuisine : "mexican",
-    prepTime : "15 mins", 
-    cookTime : "20 mins",
-    email : "deigo@foodies.com",
-    description : "Loaded burrito filled with rice, beans, cheese, and spicy mexican flavors.",
-    instructions : [
-        "Cook rice and beans.",
-        "Warm tortilla wraps.",
-        "Add fillings and cheese.",
-        "Roll tightly and serve."
-    ]
+    likes: 267,
+    serving: 2,
+    cuisine: "mexican",
+    prepTime: "15 mins",
+    cookTime: "20 mins",
+    email: "deigo@foodies.com",
+    description:
+      "Loaded burrito filled with rice, beans, cheese, and spicy mexican flavors.",
+    instructions: [
+      "Cook rice and beans.",
+      "Warm tortilla wraps.",
+      "Add fillings and cheese.",
+      "Roll tightly and serve.",
+    ],
+    image : "/burrito.webp"
   },
   {
-    id : 12,
+    id: 12,
     slug: "thai-curry",
     name: "Thai Curry",
     chef: "Nina",
-    serving : 4,
-    likes : 201,
-    prepTime : "20 mins",
-    cookTime : '25 mins',
-    email : "nina@foodies.com",
-    cuisine : "Thai",
-    description : "Authentic Thai curry cooked with coconut milk and aromatic spices.",
-    instructions : [
-        "Cook curry paste in oil.",
-        "Add coconut milk.",
-        "Add vegetables and protein",
-        "Simmer and serve hot."
-    ]
+    serving: 4,
+    likes: 201,
+    prepTime: "20 mins",
+    cookTime: "25 mins",
+    email: "nina@foodies.com",
+    cuisine: "Thai",
+    description:
+      "Authentic Thai curry cooked with coconut milk and aromatic spices.",
+    instructions: [
+      "Cook curry paste in oil.",
+      "Add coconut milk.",
+      "Add vegetables and protein",
+      "Simmer and serve hot.",
+    ],
+    image : "/thaicurry.webp"
   },
   {
-    id : 13,
+    id: 13,
     slug: "ramen-bowl",
     name: "Ramen Bowl",
     chef: "Haruto",
-    like : 224,
-    serving : 3,
-    email : 'haruto@gmail.com',
-    prepTime : "20 mins",
-    cookTime : "15 mins",
-    cuisine : "Japanese",
-    description : "Warm and comforting ramen noodles served in rich savory broth.",
-    instructions : [
-        "Prepare ramen broth.",
-        "Cook noodles seprately.",
-        "Assemble noodles in bowl.",
-        "Add toppings and broth."
-    ]
+    likes: 224,
+    serving: 3,
+    email: "haruto@gmail.com",
+    prepTime: "20 mins",
+    cookTime: "15 mins",
+    cuisine: "Japanese",
+    description:
+      "Warm and comforting ramen noodles served in rich savory broth.",
+    instructions: [
+      "Prepare ramen broth.",
+      "Cook noodles seprately.",
+      "Assemble noodles in bowl.",
+      "Add toppings and broth.",
+    ],
+    image : "/ramen.webp"
   },
   {
-    id : 1,
+    id: 14,
     slug: "bbq-steak",
     name: "BBQ Steak",
     chef: "Liam",
-    email : "liam@foodies.com",
-    like : 421,
-    cuisine : "American",
-    
+    email: "liam@foodies.com",
+    likes: 421,
+    cuisine: "American",
+    serving: 3,
+    prepTime: "20 mins",
+    cookTime: "25 mins",
+    description: "Smoky and juicy BBQ steak grilled with flavborful marnades.",
+    instructions: [
+      "Marinate steak with spices.",
+      "Heat grill pan.",
+      "Cook steak to desired state.",
+      "Rest and slice before serving.",
+    ],
+    image : "/steak.webp"
   },
   {
+    id: 15,
     name: "Avocado Toast",
     slug: "avocado-toast",
     chef: "Chloe",
+    email: "chloe@foodies.com",
+    serving: 2,
+    prepTime: "20 mins",
+    cookTime: "25 mins",
+    likes: 652,
+    cuisine: "American",
+    description:
+      "Crispy toasted bread topped with creamy avocado and seasonings.",
+    instructions: [
+      "Toast bread slices.",
+      "Mash ripe avocado.",
+      "Spread avocado on toast.",
+      "Add seasonings and serve.",
+    ],
+    image : "/avocadotoast.webp"
   },
   {
+    id: 16,
     slug: "pesto-pasta",
     name: "Pesto Pasta",
     chef: "Marco",
+    prepTime: "30 mins",
+    cookTime: "45 mins",
+    likes: 353,
+    cuisine: "Italian",
+    email: "marco@foodies.com",
+    serving: 3,
+    description:
+      "Fresh pasta tossed in rich basil pesto sauce with parmesan cheese.",
+    instructions: [
+      "Cook pasta until tender.",
+      "Prepare basil pesto sauce.",
+      "Miix pasta with pesto.",
+      "Top with parmesan cheese.",
+    ],
+    image : "/pestopast.webp"
   },
   {
+    id: 17,
     slug: "fried-rice-special",
     name: "Fried Rice Special",
     chef: "Wei",
+    likes: 285,
+    email: "wei@foodies.com",
+    prepTime: "15 mins",
+    cookTime: "20 mins",
+    cuisine: "chinese",
+    serving: 4,
+    description:
+      "Flavor packed fried rice cooked with vegetables and savory sauces.",
+    instructions: [
+      "Cook rice and cool it.",
+      "Stir  fry vegetables.",
+      "Add rice and sauces.",
+      "Mix well and serrve hot.",
+    ],
+    image : "/friedrice.webp"
   },
   {
-    slug: "ceaser-salad",
-    name: "Ceaser Salad",
+    id: 18,
+    slug: "caeser-salad",
+    name: "Caeser Salad",
     chef: "Sophia",
+    cuisine: "mexican",
+    cookTime: "25 mins",
+    prepTime: "15 mins",
+    email: "sophia2@foodies.com",
+    likes: 285,
+    serving: 4,
+    description:
+      "Fresh caeser salad with crispy lettuce, croutons, and creamy dressing.",
+    instructions: [
+      "Wash and chop lettuce.",
+      "Prepare caesar dressing",
+      "Mix lettuce with dressing.",
+      "Add croutons and cheese",
+    ],
+    image : "/caesarsalad.webp"
   },
   {
+    id: 19,
     slug: "tandoori-chicken",
     name: "Tandoori Chicken",
     chef: "Arjun",
+    likes: 452,
+    serving: 4,
+    prepTime: "30 mins",
+    cookTime: "20 mins",
+    email: "arjun@foodies.com",
+    cuisine: "Indian",
+    description:
+      "Spicy tandoori chicken marinated in yogurt and indian spices.",
+    instructions: [
+      "Marinate chicken overnight.",
+      "Prehead oven or grill.",
+      "cook chicken evenly",
+      "Serve with mint chutney.",
+    ],
+    image : "/tandoorichicken.webp"
   },
   {
+    id: 20,
     slug: "shrimp-noodles",
     name: "Shrimp Noodles",
     chef: "Mia",
+    email: "mia@foodies.com",
+    cuisine: "chinese",
+    likes: 343,
+    cookTime: "25 mins",
+    prepTime: "40 mins",
+    serving: 3,
+    description:
+      "Delicious noodles stir fried with shrimp and flavorful sauces.",
+    instructions: [
+      "Cook noodles seprately.",
+      "Saute shrimp with garlic.",
+      "Add noodles and sauce.",
+      "Mix well and serve hot.",
+    ],
+    image : "/shrimpnoodles.webp"
   },
   {
+    id: 21,
     slug: "loaded-fries",
     name: "Loaded Fries",
     chef: "Ethan",
+    cookTime: "15 mins",
+    prepTime: "20 mins",
+    likes: 232,
+    email: "ethan@foodies.com",
+    cuisine: "American",
+    serving: 2,
+    description: "Crispy fries topped with cheese, sauces, and tasty toppings.",
+    instructions: [
+      "Bake or fry potato fries.",
+      "Add melted cheese on top.",
+      "Frizzle sauces generously.",
+      "Serve immediately.",
+    ],
+    image : "/loadedfries.webp"
   },
   {
+    id: 22,
     slug: "mushroom-risotto",
     name: "Mushroom Risotto",
     chef: "Isabella",
+    likes: 245,
+    serving: 3,
+    email: "isabella@foodies.com",
+    cookTime: "15 mins",
+    prepTime: "30 mins",
+    cuisine: "Italy",
+    description:
+      "Creamy Italian risotto cooked with mushrooms and parmesan cheese.",
+    instructions: [
+      "Cook mushrooms in butter.",
+      "Add rice and broth slowly.",
+      "Stir continously while cooking.",
+      "Add parmesan and serve.",
+    ],
+    image : "/risotto.webp"
   },
   {
+    id: 23,
     slug: "kim-bibimbap",
     name: "Kim Bibimbap",
     chef: "Jiho",
+    cookTime: "20 mins",
+    prepTime: "15 mins",
+    likes: 224,
+    email: "jiho@foodies.com",
+    serving: 2,
+    cuisine: "korean",
+    description:
+      "Traditional korean rice bowl mixed with vegetables and spicy sauce.",
+    instructions: [
+      "Cook rice until fluffy.",
+      "Saute vegetables seprately.",
+      "Arrange toppings over rice.",
+      "Add spicy sauce before serving.",
+    ],
+    image : "/bibimbap.webp"
   },
   {
+    id: 24,
     slug: "chocolate-pancakes",
     name: "Chocolate Pancakes",
     chef: "Noah",
+    email: "noah@foodies.com",
+    cookTime: "25 mins",
+    prepTime: "15 mins",
+    likes: 243,
+    serving: 2,
+    cuisine: "greek",
+    description: "Soft and fluffy pancakes topped with rice chocolate syrup.",
+    instructions: [
+      "Prepare pancakes batter.",
+      "Cook pancakes on pan.",
+      "Stack pancakes neatly.",
+      "Pour chocolate syrup on top.",
+    ],
+    image : "/chocolatepancakes.webp"
   },
   {
-    slug: "spinach-lasgaa",
+    id: 25,
+    slug: "spinach-lasgana",
     name: "Spinach Lasagna",
     chef: "Elena",
+    cuisine: "Italian",
+    email: "elena@foodies.com",
+    cookTime: "25 mins",
+    prepTime: "30 mins",
+    serving: 4,
+    likes: 432,
+    description:
+      "Layered lasagna filled with spinachm creamy cheese, and sauce.",
+    instructions: [
+      "Prepare pasta sheets and fillings.",
+      "Layer pasta sheets and fillings.",
+      "Add cheese and sauce.",
+      "Bake until golden brown",
+    ],
+    image : "/lasagna.webp"
   },
   {
+    id: 26,
     slug: "fish-and-chips",
     name: "Fish and Chips",
     chef: "Oliver",
+    email: "oliver@foodies.com",
+    prepTime: "20 mins",
+    cookTime: "15 mins",
+    cuisine: "American",
+    likes: 241,
+    serving: 3,
+    description:
+      "Crispy fried fish served with golden fries and dipping sauce.",
+    instructions: [
+      "Coat fish in batter.",
+      "Deep fry until crispy.",
+      "Cook fries until golden.",
+      "Serve hot with ketchup.",
+    ],
+    image : "/fishandchips.webp"
   },
   {
+    id: 27,
     slug: "dumplings",
     name: "Dumplings",
     chef: "Mei",
+    email: "mei@foodies.com",
+    cookTime: "25 mins",
+    prepTime: "30 mins",
+    likes: 234,
+    serving: 2,
+    cuisine: "Japanese",
+    description: "Soft and juicy dumplings filled with flavorful ingredients.",
+    instructions: [
+      "Prepare dumplings filling.",
+      "Wrap filling in dough.",
+      "Steam dumplings properly.",
+      "Serve with diping sauce.",
+    ],
+    image : "/dumplings.webp"
   },
   {
+    id: 28,
     slug: "fruit-juice",
     name: "Fruit Juice",
     chef: "Ava",
+    email: "ava@foodies.com",
+    cookTime: "0 mins",
+    prepTime: "10 mins",
+    like: 234,
+    serving: 1,
+    cuisine: "middle eastern",
+    description: "Refreshing mixed fruit juice made with fresh fruits",
+    instructions: [
+      "Wash and cut fruits.",
+      "Blend fruits smoothly.",
+      "Strain juice if needed.",
+      "Serve chilled",
+    ],
+    image : "/fruitjuice.webp"
   },
 ];
