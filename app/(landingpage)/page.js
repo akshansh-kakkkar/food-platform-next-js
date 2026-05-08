@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Lato, Roboto } from "next/font/google";
-import {motion, scale} from 'motion/react'
+import {motion} from 'motion/react'
 const lato = Lato({
  subsets: ["latin"],
  weight : ['400', '700'],
