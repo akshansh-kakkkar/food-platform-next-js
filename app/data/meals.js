@@ -1,5 +1,3 @@
-import { image } from "motion/react-client";
-
 export const meals = [
   {
     id: 1,
@@ -33,7 +31,7 @@ export const meals = [
     cookTime: "35 mins",
     serving: 3,
     likes: 246,
-    image : "/chickencurry.webp",
+    image : "/chicken-curry.webp",
     cuisine: "Indian",
     description:
       "Rich and flavorful chicken curry cooked with aromatic Indian spices and herbs.",
@@ -109,7 +107,7 @@ export const meals = [
       "Assemble burger with vegetables",
       "Serve with fries",
     ],
-    image : "burger.webp"
+    image : "/burger.webp"
   },
   {
     id: 6,
@@ -131,7 +129,7 @@ export const meals = [
       "Bake until crispy.",
       "Garnish with basil leaves.",
     ],
-    image : "/pizza.webp"
+    image : "/margherita.webp"
   },
   {
     id: 7,
@@ -280,7 +278,7 @@ export const meals = [
       "Assemble noodles in bowl.",
       "Add toppings and broth.",
     ],
-    image : "/ramen.webp"
+    image : "/ramenbowl.webp"
   },
   {
     id: 14,
@@ -342,7 +340,7 @@ export const meals = [
       "Miix pasta with pesto.",
       "Top with parmesan cheese.",
     ],
-    image : "/pestopast.webp"
+    image : "/pestopasta.webp"
   },
   {
     id: 17,
@@ -590,6 +588,7 @@ export const meals = [
       "Strain juice if needed.",
       "Serve chilled",
     ],
-    image : "/fruitjuice.webp"
+    image : "/fruitjuice.webp",
+    likes : 354
   },
 ];
