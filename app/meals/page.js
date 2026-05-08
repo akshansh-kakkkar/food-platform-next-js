@@ -20,6 +20,7 @@ export default function mealsPerPage() {
   const totalPages = Math.ceil(meals.length / mealsPerPage);
 
   return (
+    
     <div className="m-4">
       <div className="mx-8 my-4 flex gap-1 flex-col">
         <h1 className={`text-4xl font-medium ${roboto.className}`}>

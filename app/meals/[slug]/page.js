@@ -1,27 +1,178 @@
 import React from "react";
+import { meals } from "@/app/data/meals";
+import Link from "next/link";
+import Image from "next/image";
+import { Poppins, Roboto } from "next/font/google";
+const roboto = Roboto({
+  subsets: ["latin"],
+});
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["500", "700"],
+});
 export default async function mealDetailsPage({ params }) {
   const { slug } = await params;
-  return (
-    <div className="mx-12 my-12">
-      <div className="flex flex-col gap-4 my-4">
-        <h1 className="text-3xl font-semibold text-blue-950 ">Meal Details</h1>
-        <p className="text-2xl">
-          You are viewing the meal : <strong>{slug}</strong>
-        </p>
-        <p className="text-2xl">
-          This page is dynamically generated based on URL parameters!
-        </p>
+  const meal = meals.find((m) => m.slug === slug);
+
+  if (!meal) {
+    return (
+      <div>
+        <div className="flex text-blue-950 justify-center items-center w-full h-[50vh] text-9xl font-bold">
+          404
+        </div>
       </div>
-      <div className="bg-blue-100 border-blue-400 border-2 rounded-md flex flex-col gap-5 p-2 py-4 md:mr-16">
-        <p className="text-xl">How This Works:</p>
-        <p className="text-lg">
-          The URL `/meals/{slug}` automatically passes `{slug}` as a parameter
-          to this pages component.
-        </p>
-        <p  className="text-lg">
-          We can use this parameter to fetch specific meal data, customize
-          content and more.
-        </p>
+    );
+  }
+  return (
+    <div className="h-full">
+      <Link
+        href={"/meals"}
+        className="mx-12 text-orange-400 text-lg hover:underline underline-offset-5"
+      >
+        Back to menu
+      </Link>
+      <div className="lg:mx-54 mx-4 md:mx-12">
+        <div className="bg-white p-4 md:p-12 rounded-2xl mt-6 shadow-md">
+          <div className="flex justify-between  relative">
+            <div className="relative  w-full justify-end h-[520px]">
+              <Image
+                fill
+                className="object-cover rounded-2xl h-full w-full"
+                src={meal.image}
+                alt={meal.name}
+              />
+              <div className="absolute inset-0 w-full h-30 bg-gradient-to-b from-black/35 to-black/75   rounded-t-2xl"></div>
+              <div
+                className={`absolute text-2xl sm:text-3xl mt-8 mx-6 text-white font-bold uppercase ${roboto.className}`}
+              >
+                {meal.name}
+              </div>
+              <div
+                className={`absolute text-lg mt-20 mx-6 text-white font-medium ${roboto.className}`}
+              >
+                Chef : {meal.chef}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bg-white shadow-lg mt-4 rounded-2xl mb-4 p-5">
+          <div>
+            <div className="mb-3 flex flex-col gap-1">
+              <h2
+                className={`text-2xl text-gray-950 ${poppins.className} uppercase`}
+              >
+                Description
+              </h2>
+              <div className="h-[4px] rounded-2xl w-39 bg-orange-400"></div>
+            </div>
+            <div className={`text-xl text-gray-600 ${poppins.className}`}>
+              {meal.description}
+            </div>
+          </div>
+        </div>
+        <div className="bg-white shadow-lg mt-4 rounded-2xl mb-4 p-5">
+          <div className="gap-8 flex flex-col">
+            <div className="mb-3 flex flex-col gap-1">
+              <h2
+                className={`text-2xl text-gray-950 ${poppins.className} uppercase`}
+              >
+                Instructions
+              </h2>
+              <div className="h-[4px] rounded-2xl w-43 bg-orange-400"></div>
+            </div>
+            <div>
+              <div
+                className={`md:text-2xl text-lg text-green-700 flex gap-4 items-center  ${poppins.className}`}
+              >
+                <span className="text-2xl text-white bg-orange-400 p-2 px-5 rounded-full ">
+                  1
+                </span>{" "}
+                {meal.instructions[0]}
+              </div>
+            </div>
+            <div
+              className={`md:text-2xl text-lg text-green-700 flex gap-4 items-center ${poppins.className}`}
+            >
+              <span className="text-2xl text-white bg-orange-400 p-2 px-4 rounded-full ">
+                2
+              </span>{" "}
+              {meal.instructions[1]}
+            </div>
+            <div
+              className={`md:text-2xl text-lg text-green-700 flex gap-4 items-center ${poppins.className}`}
+            >
+              <span className="text-2xl text-white bg-orange-400 p-2 px-4 rounded-full ">
+                3
+              </span>{" "}
+              {meal.instructions[2]}
+            </div>
+            <div
+              className={`md:text-2xl text-lg text-green-700 flex gap-4 items-center ${poppins.className}`}
+            >
+              <span className="text-2xl text-white bg-orange-400 p-2 px-4 rounded-full ">
+                4
+              </span>{" "}
+              {meal.instructions[3]}
+            </div>
+          </div>
+        </div>
+        <div className="bg-white shadow-lg mt-4  rounded-2xl mb-4 p-5">
+          <div className="mb-3 flex flex-col gap-1">
+            <h2
+              className={`text-2xl text-gray-950 ${poppins.className} uppercase`}
+            >
+              Quick info
+            </h2>
+            <div className="h-[4px] rounded-2xl w-35 bg-orange-400"></div>
+            <div className="mx-5 my-4 bg-gray-100 p-3 rounded-lg flex justify-between">
+              <div className="text-xl text-blue-950 font-medium">Prep Time</div>
+              <div className="text-xl text-orange-400 font-medium">
+                {meal.prepTime}
+              </div>
+            </div>
+            <div className="mx-5  bg-gray-100 mb-2 p-3 rounded-lg flex justify-between">
+              <div className="text-xl text-blue-950 font-medium">Cook Time</div>
+              <div className="text-xl text-orange-400 font-medium">
+                {meal.cookTime}
+              </div>
+            </div>
+            <div className="mx-5 my-2 bg-gray-100 p-3 rounded-lg flex justify-between">
+              <div className="text-xl text-blue-950 font-medium">Servings</div>
+              <div className="text-xl text-orange-400 font-medium">
+                {meal.serving}
+              </div>
+            </div>
+
+            <div className="mx-5 my-2 bg-gray-100 p-3 rounded-lg flex justify-between">
+              <div className="text-xl text-blue-950 font-medium">Likes</div>
+              <div className="text-xl text-orange-400 font-medium">
+                {meal.likes}
+              </div>
+            </div>
+            <div className="mx-5 my-2 bg-gray-100 p-3 rounded-lg flex justify-between">
+              <div className="text-xl text-blue-950 font-medium">Cuisine</div>
+              <div className="text-xl text-orange-400 font-medium">
+                {meal.cuisine}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bg-white shadow-lg mt-4  rounded-2xl mb-4 p-5">
+          <div className="mb-3 flex flex-col gap-1">
+            <h2
+              className={`text-2xl text-gray-950 ${poppins.className} uppercase`}
+            >
+              Chef Info
+            </h2>
+            <div className="h-[4px] rounded-2xl w-30 bg-orange-400"></div>
+          </div>
+          <div className={`${poppins.className} uppercase text-2xl text-gray-800 font-bold m-3`}>
+            {meal.chef}
+          </div>
+                    <div className={`${poppins.className} text-gray-500 text-xl m-3`}>
+            {meal.email}
+          </div>
+        </div>
       </div>
     </div>
   );
