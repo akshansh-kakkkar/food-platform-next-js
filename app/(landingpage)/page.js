@@ -20,10 +20,10 @@ export default function Home() {
         lovers worldwide!</p>
         <div className="flex gap-4">
         <motion.div whileTap={{scale:1.1}} whileHover={{scale:0.95}}>
-        <Link className="lg:text-xl text-lg text-center lg:ext-2xl bg-blue-950 shadow-2xl shadow-blue-950  flex text-white w-fit md:py-3 py-1 px-2 md:px-5 lg:px-12" href={'/meals'}>View Recipes</Link>
+        <Link className=" text-lg text-center lg:text-2xl bg-blue-950 shadow-2xl shadow-blue-950  flex text-white w-fit md:py-3 py-1 px-2 md:px-5 lg:px-12" href={'/meals'}>View Recipes</Link>
         </motion.div>
                 <motion.div whileTap={{scale:1.1}} whileHover={{scale:0.95}}>
-        <Link className="lg:text-xl text-lg text-center lg:ext-2xl border-2 border-blue-950 shadow-2xl flex text-blue-950 w-fit md:py-3 md:px-5 py-1 px-2 lg:px-12" href={'/dashboard'}>View Dashboard</Link>
+        <Link className=" text-lg text-center lg:text-2xl border-2 border-blue-950 shadow-2xl flex text-blue-950 w-fit md:py-3 md:px-5 py-1 px-2 lg:px-12" href={'/dashboard'}>View Dashboard</Link>
         </motion.div>
         </div>
     </div>

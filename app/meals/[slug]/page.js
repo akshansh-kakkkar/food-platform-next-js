@@ -123,33 +123,33 @@ export default async function mealDetailsPage({ params }) {
             >
               Quick info
             </h2>
-            <div className="h-[4px] rounded-2xl w-35 bg-orange-400"></div>
-            <div className="mx-5 my-4 bg-gray-100 p-3 rounded-lg flex justify-between">
+            <div className="h-[4px]  rounded-2xl w-35 bg-orange-400"></div>
+            <div className="mx-5 my-4 cursor-pointer hover:scale-[99%] transition-all hover:-translate-y-2 duration-300 bg-gray-100 p-3 rounded-lg flex justify-between">
               <div className="text-xl text-blue-950 font-medium">Prep Time</div>
               <div className="text-xl text-orange-400 font-medium">
                 {meal.prepTime}
               </div>
             </div>
-            <div className="mx-5  bg-gray-100 mb-2 p-3 rounded-lg flex justify-between">
+            <div className="mx-5 cursor-pointer hover:scale-[99%] duration-300 hover:-translate-y-2 bg-gray-100 mb-2 p-3 rounded-lg flex justify-between">
               <div className="text-xl text-blue-950 font-medium">Cook Time</div>
               <div className="text-xl text-orange-400 font-medium">
                 {meal.cookTime}
               </div>
             </div>
-            <div className="mx-5 my-2 bg-gray-100 p-3 rounded-lg flex justify-between">
+            <div className="mx-5 my-2 hover:scale-[99%] cursor-pointer duration-300 hover:-translate-y-2 bg-gray-100 p-3 rounded-lg flex justify-between">
               <div className="text-xl text-blue-950 font-medium">Servings</div>
               <div className="text-xl text-orange-400 font-medium">
                 {meal.serving}
               </div>
             </div>
 
-            <div className="mx-5 my-2 bg-gray-100 p-3 rounded-lg flex justify-between">
+            <div className="mx-5 my-2 cursor-pointer hover:scale-[99%] duration-300 hover:-translate-y-2 bg-gray-100 p-3 rounded-lg flex justify-between">
               <div className="text-xl text-blue-950 font-medium">Likes</div>
               <div className="text-xl text-orange-400 font-medium">
                 {meal.likes}
               </div>
             </div>
-            <div className="mx-5 my-2 bg-gray-100 p-3 rounded-lg flex justify-between">
+            <div className="mx-5 hover:-translate-y-2 hover:scale-[99%] duration-300 cursor-pointer my-2 bg-gray-100 p-3 rounded-lg flex justify-between">
               <div className="text-xl text-blue-950 font-medium">Cuisine</div>
               <div className="text-xl text-orange-400 font-medium">
                 {meal.cuisine}
@@ -166,10 +166,13 @@ export default async function mealDetailsPage({ params }) {
             </h2>
             <div className="h-[4px] rounded-2xl w-30 bg-orange-400"></div>
           </div>
-          <div className={`${poppins.className} uppercase text-2xl text-gray-800 font-bold m-3`}>
-            {meal.chef}
+          <div
+            className={`${poppins.className} uppercase text-2xl text-gray-800 font-bold m-3`}
+          >
+            Name : {meal.chef}
           </div>
-                    <div className={`${poppins.className} text-gray-500 text-xl m-3`}>
+          <div className={`${poppins.className} text-gray-500 text-xl m-3`}>
+            <span className="text-gray-800  font-bold">Email : </span>{" "}
             {meal.email}
           </div>
         </div>
